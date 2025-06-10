@@ -5,6 +5,8 @@ use App\Http\Controllers\Link ;
 use App\Http\Controllers\Pegawai2Controller ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiController ;
+use App\Http\Controllers\SofaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -88,3 +90,12 @@ Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit'] );
 Route::post('/pegawai/update', [PegawaiController::class, 'update'] );
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus'] );
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari'] );
+
+//crud sofa
+Route::get('/sofa', [SofaController::class, 'index'] );
+Route::get('/sofa/tambah', [SofaController::class, 'tambah'] );
+Route::post('/sofa/store', [SofaController::class, 'store'] );
+Route::get('/sofa/edit/{id}', [SofaController::class, 'edit'] );
+Route::post('/sofa/update', [SofaController::class, 'update'] );
+Route::get('/sofa/hapus/{id}', [SofaController::class, 'hapus'] );
+Route::get('/sofa/cari', [SofaController::class, 'cari'] );
