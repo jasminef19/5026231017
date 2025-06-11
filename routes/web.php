@@ -6,6 +6,7 @@ use App\Http\Controllers\Pegawai2Controller ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\SofaController;
+use App\Http\Controllers\keranjangbelanjaController;
 
 
 /*
@@ -99,3 +100,9 @@ Route::get('/sofa/edit/{id}', [SofaController::class, 'edit'] );
 Route::post('/sofa/update', [SofaController::class, 'update'] );
 Route::get('/sofa/hapus/{id}', [SofaController::class, 'hapus'] );
 Route::get('/sofa/cari', [SofaController::class, 'cari'] );
+
+//crud keranjang belanja
+Route::get('/keranjang', [keranjangbelanjaController::class, 'index'] );
+Route::get('/keranjang/tambah/{id}', [keranjangbelanjaController::class, 'tambah'] );
+Route::post('/keranjang/store', [keranjangbelanjaController::class, 'store'] );
+Route::get('/keranjang/hapus/{id}', [keranjangbelanjaController::class, 'hapus'] );
