@@ -7,6 +7,8 @@ use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\SofaController;
 use App\Http\Controllers\keranjangbelanjaController;
+use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\PageCounterController;
 
 
 /*
@@ -106,3 +108,12 @@ Route::get('/keranjang', [keranjangbelanjaController::class, 'index'] );
 Route::get('/keranjang/tambah/{id}', [keranjangbelanjaController::class, 'tambah'] );
 Route::post('/keranjang/store', [keranjangbelanjaController::class, 'store'] );
 Route::get('/keranjang/hapus/{id}', [keranjangbelanjaController::class, 'hapus'] );
+
+//crud karyawan
+Route::get('/karyawan', [KaryawanController::class, 'index'] );
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah'] );
+Route::post('/karyawan/store', [KaryawanController::class, 'store'] );
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus'] );
+
+//crud counter
+Route::get('/counter', [PageCounterController::class, 'index']);

@@ -13,9 +13,74 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
         .jumbotron {
-            background-color: #9de2e2;
+            background-color: #B3C8CF;
             height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0%;
         }
+
+        body {
+            background-image: url(bg_crud.jpg);
+            /* background-color: #B3C8CF; */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
+            margin-bottom: 5%;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        table th {
+            background-color: #1e3a5f;  /* warna biru gelap */
+            color: white;              /* teks putih biar kontras */
+            padding: 12px;
+            text-align: center;
+        }
+
+        table td {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .custom-navbar {
+            width: fit-content;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 5px 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* opsional buat efek bayangan */
+        }
+
+        .navbar-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .nav-link {
+            color: black !important;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+            color: #1e3a5f !important; /* atau warna hover lain kalau mau */
+        }
+
     </style>
 </head>
 
@@ -24,32 +89,34 @@
         <h1>5026231017 : Jasmine Fathina Hakim</h1>
     </div>
 
-    <nav class="navbar navbar-expand-sm bg-light">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">All Front End</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/pegawai">Pegawai</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/sofa">Tugas CRUD</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">EAS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/keranjang">Latihan 1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 2</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 3</a>
-            </li>
-        </ul>
-    </nav>
-    <br>
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-expand-sm custom-navbar">
+            <ul class="navbar-nav justify-content-center w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">All Front End</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pegawai">Pegawai</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sofa">Tugas CRUD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">EAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/keranjang">Latihan 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/karyawan">Latihan 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/counter">Latihan 3</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <div class="container">
         @yield('content')
     </div>
