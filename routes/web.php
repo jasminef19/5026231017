@@ -9,6 +9,7 @@ use App\Http\Controllers\SofaController;
 use App\Http\Controllers\keranjangbelanjaController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PageCounterController;
+use App\Http\Controllers\MyKaryawanController;
 
 
 /*
@@ -105,7 +106,7 @@ Route::get('/sofa/cari', [SofaController::class, 'cari'] );
 
 //crud keranjang belanja
 Route::get('/keranjang', [keranjangbelanjaController::class, 'index'] );
-Route::get('/keranjang/tambah/{id}', [keranjangbelanjaController::class, 'tambah'] );
+Route::get('/keranjang/tambah', [keranjangbelanjaController::class, 'tambah'] );
 Route::post('/keranjang/store', [keranjangbelanjaController::class, 'store'] );
 Route::get('/keranjang/hapus/{id}', [keranjangbelanjaController::class, 'hapus'] );
 
@@ -117,3 +118,9 @@ Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus'] );
 
 //crud counter
 Route::get('/counter', [PageCounterController::class, 'index']);
+
+//crud mykaryawan
+Route::get('/eas', [MyKaryawanController::class, 'index'] );
+Route::get('/eas/edit/{kodepegawai}', [MyKaryawanController::class, 'edit'] );
+Route::post('/eas/update', [MyKaryawanController::class, 'update'] );
+Route::get('/eas/view/{kodepegawai}', [MyKaryawanController::class, 'view'] );

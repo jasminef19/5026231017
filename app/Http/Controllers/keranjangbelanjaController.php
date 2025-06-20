@@ -11,7 +11,7 @@ class keranjangbelanjaController extends Controller
     public function index()
 	{
     	// mengambil data dari table pegawai
-		$keranjangbelanja = DB::table('keranjangbelanja')->paginate(10);
+		$keranjangbelanja = DB::table('keranjangbelanja')->get();
 
 
     	// mengirim data pegawai ke view index

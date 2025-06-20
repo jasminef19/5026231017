@@ -2,8 +2,10 @@
 
 @section('content')
 	<h3>Data Keranjang Belanja</h3>
+    <a href="/keranjang/tambah" class="btn btn-success">Beli</a>
 
 	<br>
+    <br>
 
 	<table class="table table-striped">
 		<tr>
@@ -23,14 +25,9 @@
             <td>Rp {{ number_format($kb->Harga, 0, ',', '.') }}</td>
             <td>Rp {{ number_format($kb->Jumlah * $kb->Harga, 0, ',', '.') }}</td>
 			<td>
-				<a href="/keranjang/tambah/{{ $kb->ID }}" class="btn btn-success">Beli</a>
                 <a href="/keranjang/hapus/{{ $kb->ID }}" class="btn btn-danger">Batal</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
-
-{{ $keranjangbelanja->links() }}
-
-
 @endsection

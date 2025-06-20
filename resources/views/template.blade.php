@@ -23,11 +23,9 @@
 
         body {
             background-image: url(bg_crud.jpg);
-            /* background-color: #B3C8CF; */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            /* background-attachment: fixed; */
             margin-bottom: 5%;
         }
 
@@ -102,7 +100,7 @@
                     <a class="nav-link" href="/sofa">Tugas CRUD</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">EAS</a>
+                    <a class="nav-link" href="/eas">EAS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/keranjang">Latihan 1</a>
@@ -112,6 +110,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/counter">Latihan 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/chat">chat</a>
                 </li>
             </ul>
         </nav>

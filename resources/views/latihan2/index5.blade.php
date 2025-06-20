@@ -28,7 +28,4 @@
 	</table>
 
     <a href="/karyawan/tambah"class="btn btn-primary mb-3"> + Tambah Karyawan Baru</a>
-
-{{ $karyawan->links() }}
-
 @endsection
